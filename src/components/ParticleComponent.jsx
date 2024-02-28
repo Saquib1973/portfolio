@@ -1,9 +1,12 @@
-import React, { useCallback } from "react";
+import React, { useCallback, useContext } from "react";
 import Particles from "react-tsparticles";
 import { loadSlim } from "tsparticles-slim";
+import { ThemeContext } from "../App";
 
 
 const Particle = () => {
+  let { theme } = useContext(ThemeContext)
+
   const particlesInit = useCallback(async main => {
     console.log(main);
     await loadSlim(main);
@@ -23,7 +26,7 @@ const Particle = () => {
         "autoPlay": true,
         "background": {
           "color": {
-            "value": "#1f1f1f"
+            "value": `${theme === "dark" ? "#1C1C1C" : "FFFFFF"}`
           },
           "image": "",
           "position": "",

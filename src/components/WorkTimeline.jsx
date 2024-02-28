@@ -13,7 +13,7 @@ const WorkTimeline = () => {
             <ol className="relative border-s border-white/20">
                 {
                     WorkTime.map((work, i) => (
-                        <li className="mb-10 ms-4">
+                        <li className="mb-10 ms-4" key={i}>
                             <div className={`absolute w-3 h-3 ${i === 0 ? "bg-green" : "bg-white/60"} rounded-full mt-1.5 -start-1.5 border border-black/40`}></div>
                             <motion.h3
                                 initial={{ opacity: 0, y: 10 }}
@@ -32,7 +32,7 @@ const WorkTimeline = () => {
                                 transition={{ delay: 0.2 * i, duration: 1.5 }}
                                 className='list-disc ml-10'>
                                 {work.detail.map((d) => (
-                                    <li className="mb-1 text-base font-normal text-gray-500">{d}</li>
+                                    <li key={d} className="mb-1 text-base font-normal text-gray-500">{d}</li>
                                 ))}
 
 

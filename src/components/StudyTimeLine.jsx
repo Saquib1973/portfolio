@@ -15,8 +15,7 @@ const StudyTimeLine = () => {
                 {
                     StudyTime.map((study, i) => (
                         <li className="mb-10 ms-4"
-                            ition={{ delay: 0.1, duration: 1 }}
-
+                            key={i}
                         >
                             <div className={`absolute w-3 h-3 ${i === 0 ? "bg-green" : "bg-white/60"} rounded-full mt-1.5 -start-1.5 border border-black/40`}></div>
                             <motion.h3 className="text-lg mb-2 font-semibold text-white"
