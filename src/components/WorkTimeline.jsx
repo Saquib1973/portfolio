@@ -18,18 +18,18 @@ const WorkTimeline = () => {
                             <motion.h3
                                 initial={{ opacity: 0, y: 10 }}
                                 animate={{ opacity: 1, y: 0 }}
-                                transition={{ delay: 0.2 * i, duration: 1.5 }}
+                                transition={{ delay: 0.5 * i, duration: 1.5 }}
                                 className="text-lg font-semibold text-white">{work.name}</motion.h3>
                             <motion.h3
                                 initial={{ opacity: 0, y: 10 }}
                                 animate={{ opacity: 1, y: 0 }}
-                                transition={{ delay: 0.2 * i, duration: 1.5 }}
+                                transition={{ delay: 0.5 * i, duration: 1.5 }}
                                 className="font-extralight mb-4 text-white/60">{work.role} ( <time className="mb-1 text-sm font-normal text-white/40">{work.time}</time> )</motion.h3>
 
                             <motion.ul
                                 initial={{ opacity: 0, y: 10 }}
                                 animate={{ opacity: 1, y: 0 }}
-                                transition={{ delay: 0.2 * i, duration: 1.5 }}
+                                transition={{ delay: 0.5 * i, duration: 1.5 }}
                                 className='list-disc ml-10'>
                                 {work.detail.map((d) => (
                                     <li key={d} className="mb-1 text-base font-normal text-gray-500">{d}</li>

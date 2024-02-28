@@ -103,14 +103,14 @@ const ProjectCard = ({ name, detail, index, tags = [], id, image, git, link }) =
                 visible: { opacity: 1, y: 0 },
                 hidden: { opacity: 0, y: 20 }
             }}
-            transition={{ delay: (index % 4) * 0.5, duration: 0.6 }}
+            transition={{ delay: (index % 4) * 0.4, duration: 0.6 }}
         >
 
-            <Link to={`/project/${id}`} className='flex group justify-start cursor-pointer flex-col gap-3 hover:border-white bg-blackFade border-[0.1px] border-black rounded-md transition-all duration-500  p-8 py-10'>
-                <p className='flex items-center gap-0.5 text-xl'>{name}
+            <Link to={`/project/${id}`} className='flex group justify-start cursor-pointer flex-col gap-4 hover:border-white bg-blackFade border-[0.1px] border-black rounded-md transition-all duration-500  p-8 py-10'>
+                <p className='flex items-center gap-0.5 text-2xl'>{name}
                     <svg className='group-hover:text-green text-2xl' stroke="currentColor" fill="none" strokeWidth="2" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
                 </p>
-                <p className='leading-5 text-sm text-white/70'>
+                <p className='leading-5 text-sm text-white/70 tracking-wide'>
                     {detail}
                 </p>
                 <div className='flex gap-2'>

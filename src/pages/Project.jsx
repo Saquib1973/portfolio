@@ -23,13 +23,15 @@ const Project = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.1, duration: 1 }}>
                     <div className="image-wrap w-[300px] h-[300px] md:w-[400px] md:h-[400px] overflow-hidden mx-auto border-2 rounded-md border-transparent transition-all hover:border-green ">
-                        <a href="https://rahmanzeb.com">
-                            <img src={project.img ? project.img : long} className="w-full h-full hover:object-bottom transition-all duration-[3000ms] ease-linear object-cover object-top " alt="photo" />
-                        </a>
+                        <motion.img
+                            initial={{ opacity: 0, x: 20 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 1 }}
+                            src={project.img ? project.img : long} className="w-full h-full hover:object-bottom transition-all duration-[3000ms] ease-linear object-cover object-top " alt="photo" />
                     </div>
-                    <motion.div className='flex flex-col justify-end gap-4 w-[90%] sm:w-1/3' initial={{ opacity: 0, y: 10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.1, duration: 1 }}>
+                    <motion.div className='flex flex-col justify-end gap-4 w-[90%] sm:w-1/3' initial={{ opacity: 0, x: -20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 1 }}>
                         <p className='mt-10 text-white/80'>
                             {project.detail}
                         </p>
