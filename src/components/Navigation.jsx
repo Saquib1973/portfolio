@@ -64,11 +64,17 @@ const Navigation = ({ heading, description }) => {
             <div className='flex pt-8 gap-2 sm:gap-4 md:gap-8 text-dark sticky top-0 justify-around md:justify-start'>
                 {
                     navItems.map((navItem, i) => (
-                        <motion.div onClick={async () => {
-                            audioPlay();
-                            navigate(navItem.link)
-
-                        }} key={navItem.name} className="flex"
+                        <motion.div
+                            onClick={async () => {
+                                audioPlay();
+                                if (navItem.name === 'blog') {
+                                    window.location.href = navItem.link; // Directly open the blog link
+                                } else {
+                                    navigate(navItem.link, { replace: navItem.name === 'blog' });
+                                }
+                            }}
+                            key={navItem.name}
+                            className="flex"
                             ref={ref}
                             animate={controls}
                             initial="hidden"

@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { motion } from "framer-motion"
 import { tech } from '../utils/Resource';
-import { audioPlay } from './Navigation';
 const TechStack = () => {
     const [page, setPage] = useState('all')
     const buttonList = ["all", "frontend", "backend", "database", "others"];
@@ -19,7 +18,6 @@ const TechStack = () => {
                         buttonList.map(but => (
                             <button className={`${page === but ? "text-white" : ""}`} key={but} onClick={() => {
                                 setPage(but);
-                                audioPlay();
                             }}>{but}</button>
                         ))
                     }

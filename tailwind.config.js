@@ -28,7 +28,8 @@ export default {
                 '5xl': '50px',
             },
             fontFamily: {
-                Instrument: ["Instrument Sans", "sans-serif"]
+                Instrument: ["Instrument Sans", "sans-serif"],
+                Merienda: ["Merienda", "cursive"]
             },
         },
 

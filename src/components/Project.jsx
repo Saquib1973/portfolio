@@ -3,9 +3,12 @@ import { Projects } from '../utils/ProjectContent';
 import { Link } from 'react-router-dom';
 import { motion, useAnimation } from "framer-motion"
 import { useInView } from 'react-intersection-observer';
-import { audioPlay } from './Navigation';
+
 
 const Project = () => {
+    const ProjectClickMoveUp = () => {
+        window.scrollTo(0, 350);
+    }
     const [page, setPage] = useState(0);
     const controls = useAnimation();
     const [ref, inView] = useInView();
@@ -50,8 +53,8 @@ const Project = () => {
             </div>
 
             <nav className='w-full items-center justify-center flex'>
-                <ul className="flex items-center h-10 text-base">
-                    <li onClick={() => audioPlay()}>
+                <ul className="flex items-center h-10 text-base" onClick={ProjectClickMoveUp}>
+                    <li>
                         <button onClick={() => handlePageChange(Math.max(page - 1, 0))} className="flex items-center justify-center px-4 h-10 leading-tight text-gray-500 bg-blackFade border border-e-0 border-white/20 rounded-s-lg">
                             <svg className="w-3 h-3 -rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
                                 <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 9 4-4-4-4" />
@@ -60,14 +63,14 @@ const Project = () => {
                     </li>
                     {
                         Array.from({ length: totalPages }, (_, i) => (
-                            <li key={i} onClick={() => audioPlay()}>
+                            <li key={i}>
                                 <button onClick={() => handlePageChange(i)} className={`flex items-center justify-center px-4 h-10 leading-tight ${page === i ? 'bg-black' : 'bg-blackFade'} text-white border border-white/20`}>
                                     {i + 1}
                                 </button>
                             </li>
                         ))
                     }
-                    <li onClick={() => audioPlay()}>
+                    <li>
                         <button onClick={() => handlePageChange(Math.min(page + 1, totalPages - 1))} className="flex items-center justify-center px-4 h-10 leading-tight text-gray-500 bg-blackFade border  border-white/20 rounded-e-lg ">
                             <svg className="w-3 h-3 rotate-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
                                 <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 9 4-4-4-4" />
@@ -95,7 +98,6 @@ const ProjectCard = ({ name, detail, index, tags = [], id, image, git, link }) =
 
     return (
         <motion.div
-            onClick={() => audioPlay()}
             ref={ref}
             animate={controls}
             initial="hidden"
