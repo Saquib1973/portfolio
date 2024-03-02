@@ -22,7 +22,7 @@ const App = () => {
         <ThemeContext.Provider value={{ theme, setTheme }} >
             <AnimatePresence>
                 <Particle />
-                <div className="max-w-4xl pb-10 mx-8 md:mx-auto z-50">
+                <div className="max-w-4xl pb-10 mx-2 md:mx-auto z-50">
                     <Routes>
                         <Route path="/" element={<Home />} />
                         <Route path="/work" element={<Work />} />
