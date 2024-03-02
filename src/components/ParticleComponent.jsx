@@ -26,7 +26,7 @@ const Particle = () => {
         "autoPlay": true,
         "background": {
           "color": {
-            "value": `${theme === "dark" ? "#1C1C1C" : "FFFFFF"}`
+            "value": `${theme === "dark" ? "#040303" : "FFFFFF"}`
           },
           "image": "",
           "position": "",
@@ -35,7 +35,7 @@ const Particle = () => {
           "opacity": 1
         },
         "backgroundMask": {
-          "composite": "destination-out",
+          "composite": "destination-over",
           "cover": {
             "color": {
               "value": "#fff"
@@ -53,7 +53,7 @@ const Particle = () => {
         },
         "detectRetina": true,
         "duration": 0,
-        "fpsLimit": 240,
+        "fpsLimit": 280,
         "interactivity": {
           "detectsOn": "window",
           "events": {
@@ -88,7 +88,7 @@ const Particle = () => {
               "quantity": 5,
               "particles": {
                 "color": {
-                  "value": "#eb4034",
+                  "value": "#793FDF",
                   "animation": {
                     "enable": true,
                     "speed": 400,
@@ -105,7 +105,7 @@ const Particle = () => {
                   "outModes": {
                     "default": "destroy"
                   },
-                  "speed": 2
+                  "speed": 1
                 },
                 "size": {
                   "value": {
@@ -240,7 +240,7 @@ const Particle = () => {
             }
           },
           "color": {
-            "value": "#37996B",
+            "value": "#793FDF",
             "animation": {
               "h": {
                 "count": 0,
@@ -304,9 +304,9 @@ const Particle = () => {
             "enable": true,
             "gravity": {
               "acceleration": 9.81,
-              "enable": false,
+              "enable": true,
               "inverse": false,
-              "maxSpeed": 50
+              "maxSpeed": 2
             },
             "path": {
               "clamp": true,
@@ -327,7 +327,7 @@ const Particle = () => {
             "size": false,
             "speed": 2,
             "spin": {
-              "acceleration": 0,
+              "acceleration": 2,
               "enable": false
             },
             "straight": false,
@@ -359,7 +359,7 @@ const Particle = () => {
             "animation": {
               "count": 0,
               "enable": true,
-              "speed": 0.5,
+              "speed": 1,
               "decay": 0,
               "delay": 0,
               "sync": false,
@@ -368,7 +368,7 @@ const Particle = () => {
               "destroy": "none"
             }
           },
-          "reduceDuplicates": false,
+          "reduceDuplicates": true,
           "shadow": {
             "blur": 0,
             "color": {
@@ -515,7 +515,7 @@ const Particle = () => {
           "links": {
             "blink": false,
             "color": {
-              "value": "random"
+              "value": "#793FDF"
             },
             "consent": false,
             "distance": 100,
@@ -530,7 +530,7 @@ const Particle = () => {
               "enable": false
             },
             "triangles": {
-              "enable": false,
+              "enable": true,
               "frequency": 1
             },
             "width": 1,
@@ -548,13 +548,13 @@ const Particle = () => {
         "pauseOnBlur": true,
         "pauseOnOutsideViewport": true,
         "responsive": [],
-        "smooth": false,
+        "smooth": true,
         "style": {},
         "themes": [],
         "zLayers": 100,
         "emitters": [],
         "motion": {
-          "disable": false,
+          "disable": true,
           "reduce": {
             "factor": 4,
             "value": true

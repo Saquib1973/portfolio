@@ -59,8 +59,20 @@ const Navigation = ({ heading, description }) => {
                     </div>
                 </div>
             </div>
-            <p className='mt-6 text-xl'>{heading}</p>
-            <p className='mt-8 text-light text-base md:text-xl leading-8 h-[141px] overflow-y-auto'>{description}</p>
+            <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                transition={{ delay: 0.2, duration: 1 }}
+                animate={{
+                    opacity: 1, y: 0
+                }}
+                className='mt-6 text-xl'>{heading}</motion.p>
+            <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                transition={{ delay: 0.4, duration: 1 }}
+                animate={{
+                    opacity: 1, y: 0
+                }}
+                className='mt-8 text-light text-base md:text-xl leading-8 h-[141px] overflow-y-auto'>{description}</motion.p>
             <div className='flex pt-8 gap-2 sm:gap-4 md:gap-8 text-dark sticky top-0 justify-around md:justify-start'>
                 {
                     navItems.map((navItem, i) => (

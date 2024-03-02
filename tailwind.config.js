@@ -10,14 +10,6 @@ export default {
                 inter: ["'Inter'", "sans-serif"],
                 gelasio: ["'Gelasio'", "serif"]
             },
-
-            // colors: {
-            //     'black': '#1C1C1C',
-            //     'white': '#FFFFFF',
-            //     'blackFade': '#232323',
-            //     'green': '#37996B',
-            // },
-
             fontSize: {
                 'sm': '12px',
                 'base': '14px',
@@ -36,16 +28,16 @@ export default {
     },
     plugins: [createThemes({
         dark: {
-            'black': '#1C1C1C',
-            'white': '#FFFFFF',
+            'black': '#040303',
+            'white': '#EEEEEE',
             'blackFade': '#232323',
-            'green': '#37996B',
+            'green': '#836FFF',
         },
         light: {
-            'white': '#1C1C1C',
+            'white': '#040303',
             'black': '#FFFFFF',
             'blackFade': '#f5f5f5',
-            'green': '#1E6C44',
+            'green': '#6420AA',
         }
     }),],
 };

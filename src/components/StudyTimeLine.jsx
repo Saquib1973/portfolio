@@ -11,7 +11,7 @@ const StudyTimeLine = () => {
             transition={{ delay: 0.1, duration: 1 }}
         >
 
-            <ol className="relative border-s border-gray-200 dark:border-gray-700">
+            <ol className="relative border-s border-white/20">
                 {
                     StudyTime.map((study, i) => (
                         <li className="mb-10 ms-4"

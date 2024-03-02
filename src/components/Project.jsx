@@ -32,7 +32,11 @@ const Project = () => {
     const endIndex = startIndex + projectsPerPage;
 
     return (
-        <div className='py-10'>
+        <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4, duration: 1 }}
+            className='py-10'>
             <motion.p ref={ref} className='text-3xl'
                 animate={controls}
                 initial="hidden"
@@ -40,7 +44,7 @@ const Project = () => {
                     visible: { opacity: 1, y: 0 },
                     hidden: { opacity: 0, y: 20 },
                 }}
-                transition={{ delay: 0.1, duration: 0.5 }}
+                transition={{ delay: 0.2, duration: 1 }}
             >projects</motion.p>
             <div className='grid grid-cols-1 md:grid-cols-2 gap-4 gap-y-6 py-10 '>
                 {
@@ -80,7 +84,7 @@ const Project = () => {
                 </ul>
             </nav>
 
-        </div>
+        </motion.div>
     );
 };
 
@@ -106,7 +110,7 @@ const ProjectCard = ({ name, detail, index, tags = [], id, image, git, link }) =
                 visible: { opacity: 1, y: 0 },
                 hidden: { opacity: 0, y: 20 }
             }}
-            transition={{ delay: (index % 4) * 0.4, duration: 0.6 }}
+            transition={{ delay: (index % 4) * 0.2, duration: 1 }}
         >
 
             <Link to={`/project/${id}`} className='flex  justify-center group h-full cursor-pointer flex-col gap-4 hover:border-white bg-blackFade border-[0.1px] border-black rounded-md transition-all duration-500  p-8 py-10'>
