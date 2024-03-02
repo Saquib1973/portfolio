@@ -46,7 +46,7 @@ const Project = () => {
                 }}
                 transition={{ delay: 0.2, duration: 1 }}
             >projects</motion.p>
-            <div className='grid grid-cols-1 md:grid-cols-2 gap-4 gap-y-6 py-10 '>
+            <div className='grid grid-cols-1 md:grid-cols-2 gap-6 py-8 '>
                 {
                     Projects.slice(startIndex, endIndex).map((project, index) => {
                         return (

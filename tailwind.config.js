@@ -30,13 +30,13 @@ export default {
         dark: {
             'black': '#040303',
             'white': '#EEEEEE',
-            'blackFade': '#232323',
+            'blackFade': '#191919',
             'green': '#836FFF',
         },
         light: {
             'white': '#040303',
             'black': '#FFFFFF',
-            'blackFade': '#f5f5f5',
+            'blackFade': '#F6F5F5',
             'green': '#6420AA',
         }
     }),],
