@@ -53,7 +53,7 @@ const Particle = () => {
         },
         "detectRetina": true,
         "duration": 0,
-        "fpsLimit": 280,
+        "fpsLimit": 244,
         "interactivity": {
           "detectsOn": "window",
           "events": {
@@ -306,12 +306,12 @@ const Particle = () => {
               "acceleration": 9.81,
               "enable": true,
               "inverse": false,
-              "maxSpeed": 2
+              "maxSpeed": 5
             },
             "path": {
               "clamp": true,
               "delay": {
-                "value": 0
+                "value": 2
               },
               "enable": false,
               "options": {}
@@ -364,7 +364,7 @@ const Particle = () => {
               "delay": 0,
               "sync": false,
               "mode": "auto",
-              "startValue": "random",
+              "startValue": "max",
               "destroy": "none"
             }
           },
@@ -388,13 +388,13 @@ const Particle = () => {
           },
           "size": {
             "value": {
-              "min": 1,
-              "max": 3
+              "min": 0.5,
+              "max": 4
             },
             "animation": {
               "count": 0,
               "enable": true,
-              "speed": 3,
+              "speed": 1,
               "decay": 0,
               "delay": 0,
               "sync": false,

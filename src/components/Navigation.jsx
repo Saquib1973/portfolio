@@ -112,10 +112,11 @@ const Navigation = ({ heading, description }) => {
                 <div className='md:ml-auto'>
                     {
                         theme === "dark" ?
-                            <i className="fi fi-rr-brightness cursor-pointer text-2xl flex items-start justify-start rounded-full" onClick={handleThemeChange}></i>
+                            <i className="fi fi-ss-brightness cursor-pointer text-2xl flex items-start justify-start hover:text-green rounded-full" onClick={handleThemeChange}></i>
                             :
-                            <i className="fi fi-rr-moon cursor-pointer text-2xl flex items-start justify-start rounded-full" onClick={handleThemeChange}></i>
+                            <i className="fi fi-ss-moon-stars cursor-pointer text-2xl flex items-start justify-start hover:text-green rounded-full" onClick={handleThemeChange}></i>
                     }
+                    {/* <i className="fi fi-rr-moon ></i> */}
                 </div>
 
             </div>
