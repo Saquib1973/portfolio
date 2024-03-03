@@ -303,10 +303,10 @@ const Particle = () => {
             "drift": 0,
             "enable": true,
             "gravity": {
-              "acceleration": 9.81,
+              "acceleration": 10,
               "enable": true,
               "inverse": false,
-              "maxSpeed": 5
+              "maxSpeed": 2
             },
             "path": {
               "clamp": true,
