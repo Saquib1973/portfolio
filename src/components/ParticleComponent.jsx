@@ -71,9 +71,9 @@ const Particle = () => {
               "enable": true,
               "mode": "trail",
               "parallax": {
-                "enable": false,
-                "force": 2,
-                "smooth": 10
+                "enable": true,
+                "force": 45,
+                "smooth": 20
               }
             },
             "resize": {
@@ -303,7 +303,7 @@ const Particle = () => {
             "drift": 0,
             "enable": true,
             "gravity": {
-              "acceleration": 10,
+              "acceleration": 5,
               "enable": true,
               "inverse": false,
               "maxSpeed": 2

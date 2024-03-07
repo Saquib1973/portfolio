@@ -109,14 +109,13 @@ const Navigation = ({ heading, description }) => {
                         </motion.div>
                     ))
                 }
-                <div className='md:ml-auto'>
+                <div className='md:ml-auto ' title={`Switch to ${theme} mode`}>
                     {
                         theme === "dark" ?
-                            <i className="fi fi-ss-brightness cursor-pointer text-2xl flex items-start justify-start hover:text-green rounded-full" onClick={handleThemeChange}></i>
+                            <i className="fi fi-ss-brightness text-green cursor-pointer text-2xl flex items-start justify-start rounded-full" onClick={handleThemeChange}></i>
                             :
-                            <i className="fi fi-ss-moon-stars cursor-pointer text-2xl flex items-start justify-start hover:text-green rounded-full" onClick={handleThemeChange}></i>
+                            <i className="fi fi-ss-moon-stars text-green cursor-pointer text-2xl flex items-start justify-start rounded-full" onClick={handleThemeChange}></i>
                     }
-                    {/* <i className="fi fi-rr-moon ></i> */}
                 </div>
 
             </div>

@@ -8,6 +8,7 @@ import GuestBook from "./pages/GuestBook";
 import Error from "./pages/Error";
 import Project from "./pages/Project";
 import { createContext, useEffect, useState } from "react";
+// import Particle from "./components/Particle";
 const darkThemePreference = () => window.matchMedia("(prefers-color-scheme: dark)").matches;
 export const ThemeContext = createContext({});
 const App = () => {
