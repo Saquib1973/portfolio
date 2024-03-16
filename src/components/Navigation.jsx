@@ -72,7 +72,7 @@ const Navigation = ({ heading, description }) => {
                 animate={{
                     opacity: 1, y: 0
                 }}
-                className='mt-8 text-light text-base md:text-xl leading-8 h-[141px] overflow-y-auto'>{description}</motion.p>
+                className={`${description.length === 0 ? "" : ""} mt-8 text-light text-base md:text-xl leading-8 h-[141px] overflow-y-auto`}>{description}</motion.p>
             <div className='flex px-0 md:px-4 backdrop-blur-xl pb-6 pt-8 gap-2 sm:gap-4 md:gap-8 text-dark sticky top-0 justify-around md:justify-start'>
                 {
                     navItems.map((navItem, i) => (
@@ -109,12 +109,12 @@ const Navigation = ({ heading, description }) => {
                         </motion.div>
                     ))
                 }
-                <div className='md:ml-auto ' title={`Switch to ${theme} mode`}>
+                <div className='md:ml-auto relative ' title={`Switch to ${theme} mode`}>
                     {
                         theme === "dark" ?
-                            <i className="fi fi-ss-brightness text-green cursor-pointer text-2xl flex items-start justify-start rounded-full" onClick={handleThemeChange}></i>
+                            <i className="fi fi-ss-brightness active:scale-90 hover:scale-110 relative bottom-2 hover:bg-white p-2 transition-all text-green cursor-pointer text-2xl flex items-start justify-start rounded-full" onClick={handleThemeChange}></i>
                             :
-                            <i className="fi fi-ss-moon-stars text-green cursor-pointer text-2xl flex items-start justify-start rounded-full" onClick={handleThemeChange}></i>
+                            <i className="fi fi-ss-moon-stars active:scale-90 hover:scale-110 relative bottom-2 hover:bg-blackFade p-2 transition-all text-green cursor-pointer text-2xl flex items-start justify-start rounded-full" onClick={handleThemeChange}></i>
                     }
                 </div>
 

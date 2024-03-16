@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@cyntler/react-doc-viewer": "^1.14.1",
     "@editorjs/code": "^2.8.0",
     "@editorjs/editorjs": "^2.27.2",
     "@editorjs/embed": "^2.5.3",
@@ -33,9 +34,9 @@
     "react-intersection-observer": "^9.8.1",
     "react-router-dom": "^6.14.2",
     "react-syntax-highlighter": "^15.5.0",
-    "tsparticles-slim": "^2.12.0",
     "react-tsparticles": "^2.9.3",
-    "tsparticles": "^2.9.3"
+    "tsparticles": "^2.9.3",
+    "tsparticles-slim": "^2.12.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",

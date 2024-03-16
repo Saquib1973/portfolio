@@ -17,3 +17,7 @@ export const educationContent = {
     heading: "my education 🏫",
     description: "At IIIT Ranchi, I immerse myself in the dynamic world of Electronics and Communication Engineering. With a CGPA of 8.97, I blend theoretical knowledge with practical application, fueled by a passion for innovation. Education isn't just about grades; it's about embracing every opportunity to learn and grow."
 }
+export const resumeContent = {
+    heading: "my resume 🏫",
+    description: ""
+}
