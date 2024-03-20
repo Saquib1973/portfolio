@@ -116,7 +116,7 @@ const ProjectCard = ({ name, detail, index, tags = [], id, image, git, link }) =
                 transition={{ delay: (index % 4) * 0.2, duration: 1 }}
             >
 
-                <Link to={`/project/${id}`} className='flex group justify-center group h-full cursor-pointer flex-col gap-4 hover:border-white/50 bg-blackFade hover:shadow-md active:scale-95 hover:shadow-white/50 border-[0.1px] border-blackFade rounded-md transition-all duration-500  p-8 py-10'>
+                <Link to={`/project/${id}`} className='flex group justify-center group h-full cursor-pointer flex-col gap-4 hover:border-white/50 bg-blackFade hover:shadow-inner active:scale-95 hover:shadow-white/40 rounded-md transition-all duration-500  p-8 py-10'>
                     <p className='flex items-center gap-0.5 text-2xl'>{name}
                         <svg className='group-hover:text-green text-2xl' stroke="currentColor" fill="none" strokeWidth="2" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
                     </p>
@@ -127,7 +127,7 @@ const ProjectCard = ({ name, detail, index, tags = [], id, image, git, link }) =
                         {
                             tags.map((tag, index) => {
                                 return (
-                                    <div key={index} className='border-[1px] group-hover:text-gray-50/60 group-hover:bg-green/80 duration-500 transition-all border-white/50 text-white/40 p-1 px-3 rounded-md text-sm'>
+                                    <div key={index} className='border-[1px] duration-500 transition-all border-white/50 text-white/40 p-1 px-3 rounded-md text-sm'>
                                         {tag}
                                     </div>
                                 );

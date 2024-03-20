@@ -21,16 +21,16 @@ export default function Tooltip({ message, children }) {
                     initial={{ opacity: 0, scale: 0 }}
                     animate={{ opacity: 1, scale: 1 }}
                     exit={{ opacity: 0, scale: 0 }}
-                    transition={{ duration: 0.2 }}
-                    style={{ left: `${tooltipPosition.x}px`, top: `${tooltipPosition.y + 20}px` }}
+                    transition={{ duration: 0.2, ease: 'easeInOut' }}
+                    style={{ left: `${tooltipPosition.x + 5}px`, top: `${tooltipPosition.y + 20}px` }}
                     className="z-[1000] absolute max-md:hidden text-xs text-white"
                 >
                     <motion.span
                         initial={{ opacity: 0, scale: 0 }}
                         animate={{ opacity: 1, scale: 1 }}
                         exit={{ opacity: 0, scale: 0 }}
-                        transition={{ duration: 0.2 }}
-                        className="flex capitalize min-w-[90px]  items-center justify-center p-2 px-3 rounded-3xl bg-green/30 text-sm backdrop-blur-md max-w-[400px] tracking-wider"
+                        transition={{ duration: 0.3, ease: 'easeInOut' }}
+                        className="flex capitalize min-w-[90px]  items-center justify-center p-2 px-3 rounded-3xl bg-green/20 text-sm backdrop-blur-lg max-w-[400px] tracking-wider"
                     >
                         {message}
                     </motion.span>
