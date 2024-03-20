@@ -2,6 +2,17 @@ import image from "../imgs/long.jpeg"
 import nyaylok from "../imgs/nyaylok.jpeg"
 import blogig from "../imgs/blogigg.png"
 import academia from "../imgs/academia.png"
+
+/*
+Project content format :
+    {
+        id: '', name: '', description: [
+            "","",""
+        ]
+        , detail: '', tags: ['', '', ''], link: '', git: '', img: , date: ''
+    },
+*/
+
 export const Projects = [
     {
         id: 'nyaylokSIH', name: 'Nyaylok', description: [
@@ -43,6 +54,5 @@ export const Projects = [
     { id: 'weatherApp', name: 'Weather App', description: ['You can enter name of a place and know the weather of that location'], detail: '', tags: ['tailwind', 'react', 'express', 'mongoDb'], link: '', git: 'https://github.com/Saquib1973/WatherWebApp', img: image, date: '2021-25' },
     { id: 'ecommerce', name: 'Ecommerce', description: [], detail: '', tags: ['tailwind', 'redux', 'react', 'express', 'mongoDb'], link: '', git: 'https://github.com/Saquib1973/Ecommerce', img: image, date: '2021-25' },
 
-    // { id: '', name: '', description: '', detail: '', tags: ['saq', 'sasas', 'asasas'], link: '', git: '', img: image },
 
 ] 

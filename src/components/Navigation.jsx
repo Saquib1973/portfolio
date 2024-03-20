@@ -1,12 +1,13 @@
 import React, { useContext, useEffect, useState } from 'react'
 import saquib from "../imgs/saquib.png"
 import { Link, useLocation, useNavigate } from 'react-router-dom'
-import { navItems } from '../utils/NavigationContent'
+import { links, navItems } from '../utils/NavigationContent'
 import { useInView } from "react-intersection-observer";
 import { motion, useAnimation } from "framer-motion"
 import leetcode from "../imgs/leetcode.png"
 import click from "../imgs/click.mp3";
 import { ThemeContext } from '../App';
+import Tooltip from './Tooltip';
 export const audioPlay = () => {
     const audio = new Audio(click);
     audio.volume = 0.05;
@@ -48,14 +49,20 @@ const Navigation = ({ heading, description }) => {
 
                 <div className='flex gap-4 flex-col items-end justify-start'>
                     <div className='flex gap-4 items-center'>
-                        <Link to={'https://leetcode.com/Dr_Lilack/'} className='hover:text-white/60 flex'>
-                            <img src={leetcode} className='h-7 bg-white rounded-full mb-1 p-0.5 w-7' alt="" />
+                        <Tooltip message={'Leetcode'}>
+                            <Link to={'https://leetcode.com/Dr_Lilack/'} className='hover:text-white/60 flex'>
+                                <img src={leetcode} className='h-7 bg-white rounded-full mb-1 p-0.5 w-7' alt="" />
+                            </Link>
+                        </Tooltip>
+                        {
+                            links.map((link, i) => (
+                                <Tooltip message={link.name} key={i}>
+                                    <Link to={link.href} className='hover:text-green'><i className={`text-2xl ${link.icon}`}></i></Link>
 
-                        </Link>
-                        <Link to={'https://www.instagram.com/kooky._.cookie/'} className='hover:text-green'><i className="text-2xl fi fi-brands-instagram"></i></Link>
-                        <Link to={'https://www.linkedin.com/in/saquib-ali-4a3235219/'} className='hover:text-green'><i className="text-2xl fi fi-brands-linkedin"></i></Link>
-                        <Link to={'https://github.com/Saquib1973'} className='hover:text-green'><i className="text-2xl fi fi-brands-github"></i></Link>
-                        <Link to={'https://twitter.com/drake_spirit'} className='hover:text-green'><i className="text-2xl fi fi-brands-twitter"></i></Link>
+                                </Tooltip>
+                            ))
+                        }
+
                     </div>
                 </div>
             </div>
@@ -109,13 +116,15 @@ const Navigation = ({ heading, description }) => {
                         </motion.div>
                     ))
                 }
-                <div className='md:ml-auto relative ' title={`Switch to ${theme} mode`}>
-                    {
-                        theme === "dark" ?
-                            <i className="fi fi-ss-brightness active:scale-90 hover:scale-110 relative bottom-2 hover:bg-white p-2 transition-all text-green cursor-pointer text-2xl flex items-start justify-start rounded-full" onClick={handleThemeChange}></i>
-                            :
-                            <i className="fi fi-ss-moon-stars active:scale-90 hover:scale-110 relative bottom-2 hover:bg-blackFade p-2 transition-all text-green cursor-pointer text-2xl flex items-start justify-start rounded-full" onClick={handleThemeChange}></i>
-                    }
+                <div className='md:ml-auto relative '>
+                    <Tooltip message={`${theme} mode`}>
+                        {
+                            theme === "dark" ?
+                                <i className="fi fi-ss-brightness active:scale-90 hover:scale-110 relative bottom-2 hover:bg-white p-2 transition-all text-green cursor-pointer text-2xl flex items-start justify-start rounded-full" onClick={handleThemeChange}></i>
+                                :
+                                <i className="fi fi-ss-moon-stars active:scale-90 hover:scale-110 relative bottom-2 hover:bg-blackFade p-2 transition-all text-green cursor-pointer text-2xl flex items-start justify-start rounded-full" onClick={handleThemeChange}></i>
+                        }
+                    </Tooltip>
                 </div>
 
             </div>

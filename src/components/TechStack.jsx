@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { motion } from "framer-motion"
 import { tech } from '../utils/Resource';
 const TechStack = () => {
-    const [page, setPage] = useState('all')
+    const [page, setPage] = useState('frontend')
     const buttonList = ["all", "frontend", "backend", "database", "others"];
 
     return (
@@ -26,10 +26,10 @@ const TechStack = () => {
                         ))
                     }
                 </div>
-                <div className='flex gap-2 py-8 flex-wrap'>
+                <div className='flex gap-3 py-8 flex-wrap'>
                     {
                         tech.map((tec, i) => (
-                            <motion.div key={i} className={`border bg-blackFade rounded-md px-3 max-md:text-sm md:px-5 p-[10px] md:p-[13px]  ${tec.type === page ? "text-white border-white/60" : "border-blackFade text-white/60"}`}
+                            <motion.div key={i} className={` cursor-pointer border bg-blackFade rounded-md px-3 max-md:text-sm md:px-4 p-[10px] md:p-[10px]  ${tec.type === page ? "text-gray-50 shadow-inner shadow-white/40 border-black bg-green" : "border-blackFade text-white/60"}`}
                                 initial={{ opacity: 0, y: 20, x: 10 }}
                                 animate={{ opacity: 1, y: 0, x: 0 }}
                                 transition={{ delay: i * 0.4, duration: 0.8 }}

@@ -11,6 +11,7 @@ import { createContext, useEffect, useState } from "react";
 import Resume from "./pages/Resume";
 import { motion } from "framer-motion"
 import { audioPlay } from "./components/Navigation";
+import Tooltip from "./components/Tooltip";
 // import Particle from "./components/Particle";
 const darkThemePreference = () => window.matchMedia("(prefers-color-scheme: dark)").matches;
 export const ThemeContext = createContext({});
@@ -33,11 +34,13 @@ const App = () => {
                     transition={{ delay: 0.4, duration: 1 }}
                 >
 
-                    <Link
-                        to={'/resume'} onClick={() => audioPlay()} className={`${location.pathname === '/resume' ? "hidden" : ""} z-[100] fixed max-xl:bottom-3 xl:top-3 right-0 xl:right-1/2 xl:translate-x-[36rem] bg-green text-gray-50 p-2 rounded-xl items-center flex justify-center gap-2`} title="Open Resume">
-                        <span>Resume</span>
-                        <i className="text-2xl fi fi-rr-document"></i>
-                    </Link>
+                    <Tooltip message={'Open Resume'}>
+                        <Link
+                            to={'/resume'} onClick={() => audioPlay()} className={`${location.pathname === '/resume' ? "hidden" : ""} z-[100] fixed max-xl:bottom-3 xl:top-3 right-2 xl:right-1/2 xl:translate-x-[36rem] bg-green text-gray-50 p-2 rounded-xl items-center flex justify-center gap-2`} >
+                            <span>Resume</span>
+                            <i className="text-2xl fi fi-rr-document"></i>
+                        </Link>
+                    </Tooltip>
                     <Particle />
                 </motion.div>
                 <div className="max-w-4xl pb-10 mx-2 md:mx-auto z-50">
