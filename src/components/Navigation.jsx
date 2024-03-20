@@ -8,6 +8,7 @@ import leetcode from "../imgs/leetcode.png"
 import click from "../imgs/click.mp3";
 import { ThemeContext } from '../App';
 import Tooltip from './Tooltip';
+import imgage from "../imgs/404.png"
 export const audioPlay = () => {
     const audio = new Audio(click);
     audio.volume = 0.05;
@@ -58,7 +59,6 @@ const Navigation = ({ heading, description }) => {
                             links.map((link, i) => (
                                 <Tooltip message={link.name} key={i}>
                                     <Link to={link.href} className='hover:text-green'><i className={`text-2xl ${link.icon}`}></i></Link>
-
                                 </Tooltip>
                             ))
                         }
@@ -79,7 +79,12 @@ const Navigation = ({ heading, description }) => {
                 animate={{
                     opacity: 1, y: 0
                 }}
-                className={`${description.length === 0 ? "" : ""} mt-8 text-light text-base md:text-xl leading-8 h-[141px] overflow-y-auto`}>{description}</motion.p>
+                className={`${description.length === 0 ? "" : ""} mt-8 text-light text-base md:text-xl leading-8 h-[141px] overflow-y-auto`}>
+                {
+                    description.length === 0 ? <img src={imgage} className='object-contain' /> : <>{description}</>
+                }
+
+            </motion.p>
             <div className='flex px-0 md:px-4 backdrop-blur-xl pb-6 pt-8 gap-2 sm:gap-4 md:gap-8 text-dark sticky top-0 justify-around md:justify-start'>
                 {
                     navItems.map((navItem, i) => (
@@ -111,7 +116,7 @@ const Navigation = ({ heading, description }) => {
                                 {navItem.name}
 
                                 <svg className={`text-xl ${location === navItem.link ? "text-green" : ""}`} stroke="currentColor" fill="none" strokeWidth="2" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
-                                <span className={`absolute inset-x-0 ${location === "/" ? "-bottom-1" : "bottom-0"} h-0.5 bg-green origin-left transform scale-x-0 transition-transform duration-200 ${location === navItem.link ? "scale-x-100" : "group-hover:scale-x-100"}`}></span>
+                                <span className={`absolute inset-x-0 ${location === "/" ? "-bottom-1" : "bottom-0"} h-0.5 bg-green origin-left transition-all duration-300 scale-x-0 ${location === navItem.link ? "scale-x-100" : "group-hover:scale-x-100"}`}></span>
                             </button>
                         </motion.div>
                     ))
