@@ -85,7 +85,7 @@ const Navigation = ({ heading, description }) => {
                 }
 
             </motion.p>
-            <div className='flex px-0 md:px-4 backdrop-blur-xl pb-6 pt-8 gap-2 sm:gap-4 md:gap-8 text-dark sticky top-0 justify-around md:justify-start'>
+            <div className='flex px-0 md:px-4 backdrop-blur-xl pb-2 pt-8 gap-2 sm:gap-4 md:gap-8 text-dark sticky top-0 justify-around md:justify-start'>
                 {
                     navItems.map((navItem, i) => (
                         <motion.div
@@ -122,7 +122,7 @@ const Navigation = ({ heading, description }) => {
                     ))
                 }
                 <div className='md:ml-auto relative '>
-                    <Tooltip message={`${theme} mode`}>
+                    <Tooltip message={`${theme === 'dark' ? 'light' : 'dark'} mode`}>
                         {
                             theme === "dark" ?
                                 <i className="fi fi-ss-brightness active:scale-90 hover:scale-110 relative bottom-2 hover:bg-white p-2 transition-all text-green cursor-pointer text-2xl flex items-start justify-start rounded-full" onClick={handleThemeChange}></i>

@@ -5,6 +5,7 @@ import { Link, useLocation } from 'react-router-dom';
 import Socials from "../components/Socials"
 import { motion } from "framer-motion"
 import long from "../imgs/long.jpeg"
+import Tooltip from '../components/Tooltip';
 const Project = () => {
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -25,17 +26,25 @@ const Project = () => {
                     transition={{ delay: 0.1, duration: 0.5 }}>
                     <div className='flex flex-col-reverse gap-4 md:items-end'>
 
-                        <div className="image-wrap w-[300px] h-[300px] md:w-[400px] md:h-[400px] overflow-hidden mx-auto border-2 rounded-md border-transparent transition-all hover:border-green ">
-                            <motion.img
-                                initial={{ opacity: 0, y: 20 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.5 }}
-                                src={project.img ? project.img : long} className="w-full h-full hover:object-bottom transition-all duration-[3000ms] ease-linear object-cover object-top " alt="photo" />
+                        <div className="group relative image-wrap w-[300px] h-[300px] md:w-[400px] md:h-[400px] overflow-hidden mx-auto border-2 rounded-md border-transparent transition-all hover:border-green "
+
+                        >
+                            <div className='absolute top-1/2 z-50 bg-white text-black p-4 rounded-full -translate-x-1/2 left-1/2 group-hover:hidden'>
+                                Hover to Scroll
+                            </div>
+                            <img
+                                src={project.img ? project.img : long} className="blur-[1px] group-hover:blur-none w-full h-full hover:object-bottom transition-all duration-[4000ms] ease-linear object-cover object-top " alt="photo" />
                         </div>
                         <div className='flex justify-center gap-8'>
-                            <Link to={project.git}><i className="fi text-3xl fi-brands-github hover:text-green"></i></Link>
+                            <Tooltip message={'Open Github'}>
+
+                                <Link to={project.git}><i className="fi text-3xl fi-brands-github hover:text-green"></i></Link>
+                            </Tooltip>
                             {
-                                project.link && <Link to={project.link}><i className="fi text-3xl fi-rr-link-alt hover:text-green"></i></Link>
+                                project.link &&
+                                <Tooltip message={'Open Website'}>
+                                    <Link to={project.link}><i className="fi text-3xl fi-rr-link-alt hover:text-green"></i></Link>
+                                </Tooltip>
                             }
                         </div>
                     </div>
