@@ -85,7 +85,7 @@ const Navigation = ({ heading, description }) => {
                 }
 
             </motion.p>
-            <div className='flex px-0 md:px-4 backdrop-blur-xl pb-2 pt-8 gap-2 sm:gap-4 md:gap-8 text-dark sticky top-0 justify-around md:justify-start'>
+            <div className='flex px-0 md:px-4 backdrop-blur-xl pb-3 md:py-5 pt-6 gap-2 sm:gap-4 md:gap-8 text-dark justify-around md:justify-start'>
                 {
                     navItems.map((navItem, i) => (
                         <motion.div
