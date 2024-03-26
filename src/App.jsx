@@ -36,7 +36,7 @@ const App = () => {
 
                     <Tooltip message={'Open Resume'}>
                         <Link
-                            to={'/resume'} onClick={() => audioPlay()} className={`${location.pathname === '/resume' ? "hidden" : ""} z-[100] fixed max-xl:bottom-3 xl:top-3 right-2 xl:right-1/2 xl:translate-x-[36rem] bg-green text-gray-50 p-2 rounded-xl items-center flex justify-center gap-2`} >
+                            to={'/resume'} onClick={() => audioPlay()} className={`${location.pathname === '/resume' ? "hidden" : ""} z-[100] active:scale-95 transition-all fixed max-xl:bottom-3 xl:top-3 right-2 xl:right-1/2 xl:translate-x-[36rem] bg-green text-gray-50 p-2 rounded-xl items-center flex justify-center gap-2`} >
                             <span>Resume</span>
                             <i className="text-2xl fi fi-rr-document"></i>
                         </Link>

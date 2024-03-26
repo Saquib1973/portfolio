@@ -42,6 +42,23 @@ export const Projects = [
         ], detail: 'Crafted college note aggregation website in 20 days. Led frontend development, connecting backend for seamless user experience.', tags: ['scss', 'react', 'framer-motion'], link: 'https://academia-stacks.vercel.app/', git: 'https://github.com/hellovaibhav/AcademiaStacks', img: academia, date: '2021-25'
     },
     {
+        id: 'news4U',
+        name: 'News For You',
+        description: [
+            'News website template with admin dashboard',
+            "Project name is News4U",
+            "It is a news website template.",
+            "It includes an Admin dashboard UI as well",
+        ],
+        detail: 'Designed and developed a news website template with an integrated admin dashboard. The project, named News4U, offers a user-friendly interface for both general users browsing news articles and administrators managing the platform.',
+        tags: ['tailwind', 'react'],
+        link: 'https://news4u-saquib.vercel.app/',
+        git: 'https://github.com/Saquib1973/AssignmentSiddi',
+        img: image,
+        date: '2021-25'
+    }
+    ,
+    {
         id: 'quillBot', name: 'Quill Bot', description: ['Search Articles using a search engine for that',
             "Project name is Quill Bot",
             "It helps to find research articles from the net.",
@@ -53,6 +70,7 @@ export const Projects = [
     { id: 'firebaseAuth', name: 'Firebase Authentication App', description: ['I was asked by a company to develop a Firebase authentication app by a company on internshala as a project . Without any prior experience in Firebase I was able to make it within the given time span with the help of documentations and tutorials .'], detail: '', tags: ['react', 'scss', 'firebase'], link: 'https://fir-authentication-app-f9489.web.app/', git: 'https://github.com/Saquib1973/Firebase_Authentication_App', img: image, date: '2021-25' },
     { id: 'weatherApp', name: 'Weather App', description: ['You can enter name of a place and know the weather of that location'], detail: '', tags: ['tailwind', 'react', 'express', 'mongoDb'], link: '', git: 'https://github.com/Saquib1973/WatherWebApp', img: image, date: '2021-25' },
     { id: 'ecommerce', name: 'Ecommerce', description: [], detail: '', tags: ['tailwind', 'redux', 'react', 'express', 'mongoDb'], link: '', git: 'https://github.com/Saquib1973/Ecommerce', img: image, date: '2021-25' },
+    { id: 'portfolio', name: 'Portfolio', description: [], detail: '', tags: ['tailwind', 'react-redux', 'react', 'framer-motion'], link: 'https://heysaquib.vercel.app/', git: 'https://github.com/Saquib1973/portfolio', img: null, date: '2021-25' },
 
 
 ] 
