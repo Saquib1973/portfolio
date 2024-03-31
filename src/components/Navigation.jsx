@@ -81,9 +81,9 @@ const Navigation = ({ heading, description }) => {
                 animate={{
                     opacity: 1, y: 0
                 }}
-                className={`${description.length === 0 ? "" : ""} mt-8 text-light text-base md:text-xl leading-8 h-[141px] overflow-y-auto`}>
+                className={`${description?.length === 0 ? "" : ""} mt-8 text-light text-base md:text-xl leading-8 h-[141px] overflow-y-auto`}>
                 {
-                    description.length === 0 ? <img src={imgage} className='object-contain' /> : <>{description}</>
+                    description?.length === 0 ? <img src={imgage} className='object-contain' /> : <>{description}</>
                 }
 
             </motion.p>
