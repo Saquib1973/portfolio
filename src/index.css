@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap");
 @import "@flaticon/flaticon-uicons/css/all/all";
 
 @tailwind base;
@@ -8,90 +8,89 @@
 
 /* Scrollbar config */
 *::-webkit-scrollbar {
-    width: 12px;
+  width: 12px;
 }
 
 *::-webkit-scrollbar-track {
-    background: theme('colors.black');
+  background: theme("colors.black");
 }
 
 *::-webkit-scrollbar-thumb {
-    background: -webkit-linear-gradient(top, theme('colors.black'), #836FFF, theme('colors.black'));
-    border-radius: 5px;
-    border: 5px solid theme('colors.black');
-    transition: background 0.2s ease; /* Smooth transition on background change */
+  background: -webkit-linear-gradient(
+    top,
+    theme("colors.black"),
+    #836fff,
+    theme("colors.black")
+  );
+  border-radius: 5px;
+  border: 5px solid theme("colors.black");
+  transition: background 0.2s ease; /* Smooth transition on background change */
 }
 
 *::-webkit-scrollbar-button {
-    display: none;
+  display: none;
 }
 
 *::-webkit-scrollbar-thumb:vertical {
-    min-height: 30px;
+  min-height: 30px;
 }
 *::-webkit-scrollbar-thumb:vertical:hover {
-    cursor: grabbing;
+  cursor: grabbing;
 }
 
 *::-webkit-scrollbar-thumb:horizontal {
-    min-width: 30px;
+  min-width: 30px;
 }
-
-
-
 
 @layer components {
-    * {
-        @apply m-0 p-0 box-border text-base duration-100;
-    }
-    
-    html{
-        @apply overflow-x-hidden;
-    }
+  * {
+    @apply m-0 p-0 box-border text-base duration-100;
+  }
 
-    body {
-        @apply font-Instrument font-normal text bg-black;
-    }
+  html {
+    @apply overflow-x-hidden;
+  }
 
-    i {
-        @apply mt-0.5;
-    }
+  body {
+    @apply font-Instrument font-normal text bg-black;
+  }
 
-    section{
-        @apply py-4 px-[5vw] md:px-[7vw] lg:px-[10vw];
-    }
+  i {
+    @apply mt-0.5;
+  }
 
-    ::selection {
-        @apply bg-green/30;
-    }
+  section {
+    @apply py-4 px-[5vw] md:px-[7vw] lg:px-[10vw];
+  }
 
-    img{
-        @apply w-full h-full object-cover;
-    }
-    .text {
-        @apply text-white;
-    }
-    .text-light{
-        @apply text-white/80;
+  ::selection {
+    @apply bg-green/30;
+  }
 
-    }
-    .text-dark {
-            @apply text-white/60;
-    }
-
-
-
-
-
-
+  img {
+    @apply w-full h-full object-cover;
+  }
+  .text {
+    @apply text-white;
+  }
+  .text-light {
+    @apply text-white/80;
+  }
+  .text-dark {
+    @apply text-white/60;
+  }
+  .adminHeading {
+    @apply text-white text-2xl mb-2;
+  }
 }
 
-.ce-block__content, .ce-toolbar__content{
-    max-width: 900px;
+.ce-block__content,
+.ce-toolbar__content {
+  max-width: 900px;
 }
 
-.cdx-settings-button[data-tune='withBorder'],
-.cdx-settings-button[data-tune='withBackground'],
-.cdx-settings-button[data-tune='stretched'] {
+.cdx-settings-button[data-tune="withBorder"],
+.cdx-settings-button[data-tune="withBackground"],
+.cdx-settings-button[data-tune="stretched"] {
   display: none;
 }
