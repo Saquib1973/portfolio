@@ -17,11 +17,11 @@ const Socials = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1, duration: 1 }}
         >
-            <p className='text-3xl'>Socials</p>
+            <p className='text-3xl'>socials</p>
             <p className='flex gap-1 gap-y-2 py-4 text-white/60 items-center flex-wrap'>
                 You can find more of my work on{' '}
                 <Link to={'https://github.com/Saquib1973'} className='text-light flex items-center hover:text-green'>
-                    GitHub
+                    gitHub
                     <svg
                         stroke='currentColor'
                         fill='none'
@@ -39,7 +39,7 @@ const Socials = () => {
                 </Link>
                 ,{' '}
                 <Link to={'https://twitter.com/drake_spirit'} className='text-light flex items-center hover:text-green'>
-                    Twitter
+                    twitter
                     <svg
                         stroke='currentColor'
                         fill='none'
@@ -60,7 +60,7 @@ const Socials = () => {
                     to={'https://www.linkedin.com/in/saquib-ali-4a3235219/'}
                     className='text-light flex items-center hover:text-green'
                 >
-                    LinkedIn
+                    linkedIn
                     <svg
                         stroke='currentColor'
                         fill='none'

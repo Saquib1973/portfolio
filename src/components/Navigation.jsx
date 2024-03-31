@@ -7,6 +7,7 @@ import { motion, useAnimation } from "framer-motion"
 import leetcode from "../imgs/leetcode.png"
 import click from "../imgs/click.mp3";
 import { ThemeContext } from '../App';
+
 import Tooltip from './Tooltip';
 import imgage from "../imgs/404.png"
 export const audioPlay = () => {
@@ -28,15 +29,14 @@ const Navigation = ({ heading, description }) => {
     let { theme, setTheme } = useContext(ThemeContext)
     const handleThemeChange = () => {
         audioPlay();
-
         let newTheme = theme === "light" ? "dark" : "light";
         setTheme(newTheme);
         document.body.setAttribute('data-theme', newTheme);
-        localStorage.setItem('theme', newTheme);
+        localStorage.setItem('saquib.vercel.app', JSON.stringify({ theme: newTheme }));
 
     }
     return (
-        <motion.div ref={ref} className='border-b backdrop-blur-md border-white/10 pt-16 bg-transparent z-40 sticky -top-[340px] px-4'
+        <motion.div ref={ref} className='border-b backdrop-blur-md border-white/10 pt-8 md:pt-6 bg-transparent z-40 sticky -top-[310px] px-4'
             animate={controls}
             initial="hidden"
             transition={{ delay: 0.1, duration: 1 }}
@@ -46,7 +46,9 @@ const Navigation = ({ heading, description }) => {
             }}
         >
             <div className='flex justify-between'>
-                <img src={saquib} alt="profile image" className='w-[90px] h-[70px] rounded-md overflow-hidden relative object-top' />
+                <Link to={'/'}>
+                    <img src={saquib} alt="profile image" className='w-[90px] h-[70px] rounded-md overflow-hidden relative object-top' />
+                </Link>
 
                 <div className='flex gap-4 flex-col items-end justify-start'>
                     <div className='flex gap-4 items-center'>
@@ -85,7 +87,7 @@ const Navigation = ({ heading, description }) => {
                 }
 
             </motion.p>
-            <div className='flex px-0 md:px-4 backdrop-blur-xl pb-3 md:py-5 pt-6 gap-2 sm:gap-4 md:gap-8 text-dark justify-around md:justify-start'>
+            <div className='flex px-0 md:px-4 backdrop-blur-xl pb-0 md:py-5 max-md:pt-6 pt-5 gap-2 sm:gap-4 md:gap-8 text-dark justify-around md:justify-start'>
                 {
                     navItems.map((navItem, i) => (
                         <motion.div
@@ -121,13 +123,13 @@ const Navigation = ({ heading, description }) => {
                         </motion.div>
                     ))
                 }
-                <div className='md:ml-auto relative '>
+                <div className='md:ml-auto relative flex items-center justify-center  '>
                     <Tooltip message={`${theme === 'dark' ? 'light' : 'dark'} mode`}>
                         {
                             theme === "dark" ?
-                                <i className="fi fi-ss-brightness active:scale-90 hover:scale-110 relative bottom-2 hover:bg-white p-2 transition-all text-green cursor-pointer text-2xl flex items-start justify-start rounded-full" onClick={handleThemeChange}></i>
+                                <i className="fi fi-ss-brightness active:scale-90 hover:scale-110 relative max-md:bottom-2 hover:bg-white p-2 transition-all text-green cursor-pointer text-2xl flex items-start justify-start rounded-full" onClick={handleThemeChange}></i>
                                 :
-                                <i className="fi fi-ss-moon-stars active:scale-90 hover:scale-110 relative bottom-2 hover:bg-blackFade p-2 transition-all text-green cursor-pointer text-2xl flex items-start justify-start rounded-full" onClick={handleThemeChange}></i>
+                                <i className="fi fi-ss-moon-stars active:scale-90 hover:scale-110 relative max-md:bottom-2 hover:bg-blackFade p-2 transition-all text-green cursor-pointer text-2xl flex items-start justify-start rounded-full" onClick={handleThemeChange}></i>
                         }
                     </Tooltip>
                 </div>

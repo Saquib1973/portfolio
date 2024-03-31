@@ -13,7 +13,6 @@ const Project = () => {
 
     const projectId = useLocation().pathname.split('/')[2];
     const project = Projects.find(project => project.id === projectId);
-    console.log(project.description)
     return (
         <>
             <Navigation heading={`Project Name : ${project.name}  ( ${project.date} )`} description={project.detail} />
@@ -54,7 +53,7 @@ const Project = () => {
                         <ol className='list-disc space-y-2 text-white/80'>
                             {
                                 project.description.map((item, i) => (
-                                    <motion.li
+                                    <motion.li key={i}
                                         initial={{ opacity: 0, y: 20 }}
                                         animate={{ opacity: 1, y: 0 }}
                                         transition={{ delay: i * 0.5, duration: 1 }}
