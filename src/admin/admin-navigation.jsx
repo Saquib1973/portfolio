@@ -2,6 +2,8 @@ import React, { useContext } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { NavContext } from './admin-dashboard';
 import Tooltip from '../components/Tooltip';
+import { ThemeContext } from '../App';
+import { audioPlay } from '../components/Navigation';
 
 const adminLinks = [
     { name: 'home', href: '' },
@@ -10,11 +12,18 @@ const adminLinks = [
     { name: 'work', href: '/work' },
     { name: 'misc', href: '/misc' },
 ];
-
 const AdminNav = () => {
+    let { theme, setTheme } = useContext(ThemeContext);
     const { navMobile, setNavMobile } = useContext(NavContext);
     const location = useLocation().pathname;
+    const handleThemeChange = () => {
+        audioPlay();
+        let newTheme = theme === "light" ? "dark" : "light";
+        setTheme(newTheme);
+        document.body.setAttribute('data-theme', newTheme);
+        localStorage.setItem('saquib.vercel.app', JSON.stringify({ theme: newTheme }));
 
+    }
     return (
         <div className='max-w-xl h-full sticky left-0 top-0 md:border-r border-white/40 md:mr-4 max-md:px-2 xl:pr-4'>
             <div className={`flex gap-2 px-4 flex-col p-2 rounded-md max-md:absolute  max-md:bg-black ${navMobile ? "max-md:translate-x-0 max-md:left-0" : "max-md:-translate-x-40"}`}>
@@ -33,6 +42,10 @@ const AdminNav = () => {
                         {link.name}
                     </Link>
                 ))}
+                <Tooltip message={`${theme === 'dark' ? 'light' : 'dark'} mode`} >
+                    <button onClick={handleThemeChange} className='line-clamp-1'>Mode</button>
+
+                </Tooltip>
                 <Tooltip message={'Open Website'}>
                     <Link to={'https://heysaquib.vercel.app/'} target='_blank' className='flex items-center justify-center gap-1'>
                         <p className='text-white font-medium '>Website</p>

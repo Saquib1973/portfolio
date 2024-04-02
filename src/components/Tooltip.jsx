@@ -39,26 +39,3 @@ export default function Tooltip({ message, children }) {
         </div>
     );
 }
-
-
-/*
-
-export default function Tooltip({ message, children }) {
-
-    return (
-        <div className="group relative flex" onMouseMove={handleMouseMove}>
-            {children}
-
-            <span
-                style={{ left: `${position.x}px`, top: `${position.y + 20}px` }}
-                className={`z-[1000] absolute scale-0 transition-all text-xs text-white`}
-            >
-                <span className="flex justify-center p-4 rounded-full bg-rose-400">
-                    {message}
-                </span>
-            </span>
-        </div>
-    );
-}
-
-*/
