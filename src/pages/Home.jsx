@@ -14,10 +14,8 @@ const Home = () => {
     const { theme, setTheme } = useContext(ThemeContext);
     const [currentDir, setCurrentDir] = useState('C:/user>');
     const [dirStack, setDirStack] = useState([]);
-
     useEffect(() => {
         resetTerminal();
-
         pushToHistory(
             <div className='flex flex-col gap-1 -ml-4'>
                 <p className='text-xl text-green underline underline-offset-4 mb-1 italic tracking-wider'>Welcome!</p>
@@ -122,7 +120,6 @@ const Home = () => {
         }),
         [currentDir, dirStack, pushToHistory, resetTerminal, setTheme]
     );
-
     const handleUnknownCommand = () => {
         pushToHistory(
             <div className='my-1'>
