@@ -2,7 +2,7 @@ import image from "../imgs/long.jpeg"
 import nyaylok from "../imgs/nyaylok.jpeg"
 import blogig from "../imgs/blogigg.png"
 import academia from "../imgs/academia.png"
-
+import multimeter from "../imgs/multimeter.png"
 /*
 Project content format :
     {
@@ -65,8 +65,20 @@ export const Projects = [
         git: 'https://github.com/Saquib1973/AssignmentSiddi',
         img: image,
         date: '2021-25'
-    }
-    ,
+    },
+    {
+        id: 'multimeter', name: 'Multimeter',
+        description: [
+            "This project is a multimeter designed in Tinkercad.",
+            "It can measure various electrical parameters such as voltage, amperage, and inductance.",
+            "The project includes circuit design and instrumentation.",
+            "It was created using Tinkercad.",
+        ]
+
+        ,
+        type: ['core', 'design'],
+        detail: 'This project is a multimeter designed using Tinkercad, capable of measuring various electrical parameters like voltage, amperage, and inductance. It involves circuit design and instrumentation and was created with Tinkercad', tags: ['tinkercad', 'instrumentation', 'circuit design', 'electronics'], link: 'https://www.tinkercad.com/things/dHty7Bh3smO-multimeter-damsel?sharecode=tNV00u_XPG_uG3V-U6_6Mzi_pB9--S2HS9EFFJrgTRw', git: '', img: multimeter, date: '2021-25'
+    },
     {
         id: 'quillBot', name: 'Quill Bot', description: ['Search Articles using a search engine for that',
             "Project name is Quill Bot",
@@ -95,9 +107,10 @@ export const Projects = [
     },
     {
         id: 'portfolio', name: 'Portfolio', description: [],
-        type: ['frontend', 'design',],
+        type: ['frontend', 'design'],
         detail: '', tags: ['tailwind', 'react-redux', 'react', 'framer-motion'], link: 'https://heysaquib.vercel.app/', git: 'https://github.com/Saquib1973/portfolio', img: null, date: '2021-25'
     },
+
 
 
 ] 

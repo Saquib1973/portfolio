@@ -4,13 +4,13 @@ import { Link } from 'react-router-dom';
 import { motion, useAnimation } from "framer-motion"
 import { useInView } from 'react-intersection-observer';
 import Tooltip from './Tooltip';
-
+import Heading from './Heading';
 const Project = () => {
     const ProjectClickMoveUp = () => {
         window.scrollTo(0, 350);
     }
 
-    const [selectedTypes, setSelectedTypes] = useState('frontend');
+    const [selectedTypes, setSelectedTypes] = useState('');
     const [page, setPage] = useState(0);
     const controls = useAnimation();
     const [ref, inView] = useInView();
@@ -24,7 +24,7 @@ const Project = () => {
     const projectsPerPage = 4;
     const handleTypeChange = (e) => {
         const selectedValue = e.target.value;
-        setSelectedTypes(selectedValue ? selectedValue : 'frontend');
+        setSelectedTypes(selectedValue ? selectedValue : '');
         setPage(0);
     };
 
@@ -43,7 +43,7 @@ const Project = () => {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 1 }}
-            className='py-10'>
+            className='py-6'>
             <motion.div ref={ref} className=' flex gap-4 items-end'
                 animate={controls}
                 initial="hidden"
@@ -53,11 +53,10 @@ const Project = () => {
                 }}
                 transition={{ delay: 0.2, duration: 1 }}
             >
-                <p className='text-3xl'>
-                    projects
-                </p>
+                <Heading name={'project'} />
                 <div className='flex items-center gap-1 ml-auto'>
                     <select className='text-xs outline-none rounded-md backdrop-blur-md w-[80px] border border-green transition-all duration-500 shadow-sm shadow-white/60 md:w-[80px] md:text-sm p-1 bg-transparent text-white' value={selectedTypes} onChange={handleTypeChange}>
+                        <option className='p-1 line-clamp-1 bg-black/80 text-white' value="">All</option>
                         <option className='p-1 line-clamp-1 bg-black/80 text-white' value="frontend">Frontend</option>
                         <option className='p-1 line-clamp-1 bg-black/80 text-white' value="backend">Backend</option>
                         <option className='p-1 line-clamp-1 bg-black/80 text-white' value="design">Design</option>
@@ -66,7 +65,7 @@ const Project = () => {
                     </select>
                 </div>
             </motion.div>
-            <div className='grid grid-cols-1 md:grid-cols-2 gap-6 py-8 '>
+            <div className='grid grid-cols-1 md:grid-cols-2 h-full gap-6 py-8 '>
                 {
                     filteredProjects.slice(page * projectsPerPage, (page + 1) * projectsPerPage).map((project, index) => {
                         return (
@@ -122,18 +121,18 @@ const ProjectCard = ({ name, detail, index, tags = [], id, image, git, link }) =
 
     return (
         <Tooltip message={`Explore ${name} further`}>
-            <div className='w-full' ref={ref}>
-                <motion.div
-                    className='w-full min-h-[26vh]'
-                    animate={controls}
-                    initial="hidden"
-                    variants={{
-                        visible: { opacity: 1, y: 0 },
-                        hidden: { opacity: 0, y: 20 }
-                    }}
-                    transition={{ delay: (index % 4) * 0.2, duration: 1 }}
-                >
-                    <Link to={`/project/${id}`} className='flex group justify-center group h-full cursor-pointer flex-col gap-4 hover:border-white/50 bg-blackFade hover:shadow-inner active:scale-95 hover:shadow-white/40 rounded-md transition-all duration-500  p-8 py-10'>
+            <Link to={`/project/${id}`} className='w-full flex group justify-start group h-full cursor-pointer flex-col gap-4 hover:border-white/50 bg-blackFade hover:shadow-inner active:scale-95 hover:shadow-white/40 rounded-md transition-all duration-500  p-8 py-10'>
+                <div className='w-full' ref={ref}>
+                    <motion.div
+                        className='w-full min-h-full flex justify-start gap-4 flex-col'
+                        animate={controls}
+                        initial="hidden"
+                        variants={{
+                            visible: { opacity: 1, y: 0 },
+                            hidden: { opacity: 0, y: 20 }
+                        }}
+                        transition={{ delay: (index % 4) * 0.2, duration: 1 }}
+                    >
                         <p className='flex items-center gap-0.5 text-2xl'>{name}
                             <svg className='group-hover:text-green text-2xl' stroke="currentColor" fill="none" strokeWidth="2" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
                         </p>
@@ -149,9 +148,9 @@ const ProjectCard = ({ name, detail, index, tags = [], id, image, git, link }) =
                                 ))
                             }
                         </div>
-                    </Link>
-                </motion.div>
-            </div>
+                    </motion.div>
+                </div>
+            </Link>
         </Tooltip>
     );
 };

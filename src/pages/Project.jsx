@@ -16,7 +16,7 @@ const Project = () => {
     return (
         <>
             <Navigation heading={`Project Name : ${project.name}  ( ${project.date} )`} description={project.detail} />
-            <div className='px-4'>
+            <div className='px-4 w-full'>
 
 
                 <motion.div className='py-10 w-full flex-row-reverse flex max-md:flex-col gap-4 justify-center items-center md:items-start '
@@ -28,11 +28,11 @@ const Project = () => {
                         <div className="group relative image-wrap w-[300px] h-[300px] md:w-[400px] md:h-[400px] overflow-hidden mx-auto border-2 rounded-md border-transparent transition-all hover:border-green "
 
                         >
-                            <div className='absolute top-1/2 z-50 bg-white text-black p-4 rounded-full -translate-x-1/2 left-1/2 group-hover:hidden'>
+                            <div className='absolute top-1/2 z-50 bg-green text-black p-4 rounded-full -translate-x-1/2 left-1/2 group-hover:hidden'>
                                 Hover to Scroll
                             </div>
                             <img
-                                src={project.img ? project.img : long} className="blur-[1px] group-hover:blur-none w-full h-full hover:object-bottom transition-all duration-[4000ms] ease-linear object-cover object-top " alt="photo" />
+                                src={project.img ? project.img : long} className="blur-[1px] border-green border group-hover:blur-none w-full h-full hover:object-bottom transition-all duration-[4000ms] ease-linear object-cover object-top " alt="photo" />
                         </div>
                         <div className='flex justify-center gap-8'>
                             <Tooltip message={'Open Github'}>

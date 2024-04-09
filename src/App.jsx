@@ -17,7 +17,7 @@ export const wait = (time) => {
     return new Promise(resolve => {
         setTimeout(() => {
             resolve();
-        }, time);
+        }, 1000);
     })
 }
 const Project = lazy(() => wait(2000).then(() => import('./pages/Project')));

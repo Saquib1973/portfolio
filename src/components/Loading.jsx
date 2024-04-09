@@ -14,7 +14,7 @@ const Loading = () => {
     }, [])
     const [progress, setProgress] = useState(0)
     return (
-        <div className='max-w-4xl mx-auto min-h-[95vh] justify-between w-full bg-black py-6 flex flex-col items-center gap-6'>
+        <div className='max-w-4xl mx-auto min-h-[95vh] justify-start w-full bg-black py-6 flex flex-col items-center gap-10'>
             {/* <LoadingBar color="#836FFF" ref={ref} shadow={true} height={5} /> */}
             <LoadingBar color="#836FFF" progress={progress} onLoaderFinished={() => setProgress(0)} shadow={true} height={5} />
 

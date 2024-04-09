@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import Heading from './Heading';
 
 const Socials = () => {
     const sendEmail = () => {
@@ -12,16 +13,16 @@ const Socials = () => {
 
     return (
         <motion.div
-            className='mt-5'
+            className='py-6'
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1, duration: 1 }}
         >
-            <p className='text-3xl'>socials</p>
+            <Heading name={'socials'} />
             <p className='flex gap-1 gap-y-2 py-4 text-white/60 items-center flex-wrap'>
                 You can find more of my work on{' '}
                 <Link to={'https://github.com/Saquib1973'} className='text-light flex items-center hover:text-green'>
-                    gitHub
+                    github
                     <svg
                         stroke='currentColor'
                         fill='none'

@@ -47,13 +47,17 @@ const Navigation = ({ heading, description }) => {
         >
             <div className='flex justify-between'>
                 <Link to={'/'}>
-                    <img src={saquib} alt="profile image" className='w-[90px] h-[70px] rounded-md overflow-hidden relative object-top' />
+                    <span class="before:block before:absolute before:-inset-2 before:-inset-x-5 before:-skew-y-6 before:rounded-md before:bg-green/60 before:backdrop-blur-sm relative inline-block">
+                        <img src={saquib} alt="profile image" className='w-[70px] h-[70px] rounded-xl overflow-hidden relative object-top' />
+                    </span>
                 </Link>
 
                 <div className='flex gap-4 flex-col items-end justify-start'>
                     <div className='flex gap-4 items-center'>
+
                         <Tooltip message={'Leetcode'}>
                             <Link to={'https://leetcode.com/Dr_Lilack/'} className='hover:text-white/60 flex'>
+
                                 <img src={leetcode} className='h-7 bg-white rounded-full mb-1 p-0.5 w-7' alt="" />
                             </Link>
                         </Tooltip>
@@ -74,14 +78,16 @@ const Navigation = ({ heading, description }) => {
                 animate={{
                     opacity: 1, y: 0
                 }}
-                className='mt-6 text-xl'>{heading}</motion.p>
+                className='mt-6 text-xl '>{heading}</motion.p>
             <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 transition={{ delay: 0.4, duration: 1 }}
                 animate={{
                     opacity: 1, y: 0
                 }}
-                className={`${description?.length === 0 ? "" : ""} mt-8 text-light text-base md:text-xl leading-8 h-[141px] overflow-y-auto`}>
+                className={`${description?.length === 0 ? "" : ""} mt-8 text-light text-base md:text-xl leading-8 h-[141px] overflow-y-auto
+                first-letter:text-3xl md:first-letter:text-4xl first-letter:font-bold first-letter:text-white
+                first-letter:mr-1 first-letter:float-left`}>
                 {
                     description?.length === 0 ? <img src={imgage} className='object-contain' /> : <>{description}</>
                 }
