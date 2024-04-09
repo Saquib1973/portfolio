@@ -2,7 +2,7 @@ export const navItems = [
     { name: 'home', link: '/', icon: <i className="text-2xl fi fi-rr-house-blank"></i> },
     { name: 'work', link: '/work', icon: <i className="text-2xl fi fi-rr-briefcase"></i> },
     { name: 'education', link: '/education', icon: <i className="text-2xl fi fi-rr-graduation-cap"></i> },
-    // { name: 'guest-book', link: '/guest-book', icon: <i className="text-2xl fi fi-rr-book-alt"></i> },
+    { name: 'guest-book', link: '/guest-book', icon: <i className="text-2xl fi fi-rr-book-alt"></i> },
     { name: 'blog', link: 'https://blogig.vercel.app/user/saquib', icon: <i className="text-2xl fi fi-sr-blog-text"></i> },
 ]
 export const homeContent = {

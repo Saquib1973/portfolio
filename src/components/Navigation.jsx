@@ -36,7 +36,7 @@ const Navigation = ({ heading, description }) => {
 
     }
     return (
-        <motion.div ref={ref} className='border-b backdrop-blur-md border-white/10 pt-8 md:pt-6 bg-transparent z-40 sticky -top-[310px] px-4'
+        <motion.div ref={ref} className='border-b backdrop-blur-md border-white/10 pt-8 md:pt-6 bg-transparent z-40 sticky -top-[310px] px-2 md:px-4'
             animate={controls}
             initial="hidden"
             transition={{ delay: 0.1, duration: 1 }}
@@ -93,7 +93,7 @@ const Navigation = ({ heading, description }) => {
                 }
 
             </motion.p>
-            <div className='flex px-0 md:px-4 backdrop-blur-xl pb-0 md:py-5 max-md:pt-6 pt-5 gap-2 sm:gap-4 md:gap-8 text-dark justify-around md:justify-start'>
+            <div className='flex px-0 md:px-4 backdrop-blur-xl pb-0 md:py-5 max-md:pt-6 pt-5 gap-1 sm:gap-2 md:gap-6 text-dark justify-around md:justify-start'>
                 {
                     navItems.map((navItem, i) => (
                         <motion.div

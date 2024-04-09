@@ -1,5 +1,8 @@
-import React, { useEffect } from 'react'
+import { useEffect } from 'react'
 import Navigation from '../components/Navigation'
+import Giscus from '../components/Giscus';
+import Comments from '../components/Giscus';
+import Heading from '../components/Heading';
 
 const GuestBook = () => {
     useEffect(() => {
@@ -7,11 +10,19 @@ const GuestBook = () => {
     }, []);
 
     return (
-        <div>
-            <Navigation heading={'welcome ! Sign my guest-book.'} description={'hello there how are you doing today please leave a comment'} />
-            <div className='px-4'></div>
+        <div className='py-4 pl-1'>
+
+            <Heading name={'GuestBook'} />
+            <p className='max-md:text-xl text-3xl my-5 font-Merienda'>Write anything about me / this project</p>
+            <div className='px-3 md:px-6 bg-white/10 p-1 md:p-4 backdrop-blur-sm rounded-md'>
+                <Comments />
+            </div>
         </div>
     )
 }
 
 export default GuestBook
+
+
+
+
