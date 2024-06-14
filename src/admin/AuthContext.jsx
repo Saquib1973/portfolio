@@ -17,7 +17,7 @@ const AuthProvider = ({ children }) => {
 
     const login = async (email, password) => {
         try {
-            const response = await fetch('http://127.0.0.1:8787/api/v1/signin', {
+            const response = await fetch('https://portfolio-backend.saquibali353.workers.dev/api/v1/signin', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ email, password })
@@ -42,7 +42,7 @@ const AuthProvider = ({ children }) => {
 
     const verifyToken = async () => {
         try {
-            const response = await fetch('http://127.0.0.1:8787/api/v1/admin', {
+            const response = await fetch('https://portfolio-backend.saquibali353.workers.dev/api/v1/admin', {
                 method: 'GET',
                 headers: { 'Authorization': authToken }
             });

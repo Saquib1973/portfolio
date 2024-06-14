@@ -1,6 +1,7 @@
 import axios from 'axios';
 
-const API_URL = 'http://127.0.0.1:8787/api/v1';
+// const API_URL = 'http://127.0.0.1:8787/api/v1';
+const API_URL = 'https://portfolio-backend.saquibali353.workers.dev/api/v1';
 
 export const createTech = async (tech) => {
     const response = await axios.post(`${API_URL}/tech`, tech, {
