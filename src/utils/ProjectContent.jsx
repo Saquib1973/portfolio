@@ -10,7 +10,7 @@ Project content format :
             "","",""
         ]
         , detail: '', tags: ['', '', ''], link: '', git: '', img: , date: '',
-        type: ['frontend' , 'backend' , 'design' , 'fullstack' , 'core'],
+        type: ['frontend' , 'backend' , 'design' , 'fullstack' , 'core' ,devops],
     },
 */
 

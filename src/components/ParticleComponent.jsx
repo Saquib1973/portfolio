@@ -26,7 +26,7 @@ const Particle = () => {
         "autoPlay": true,
         "background": {
           "color": {
-            "value": `${theme === "dark" ? "#040303" : "FFFFFF"}`
+            "value": `${theme === "dark" ? "#040303" : "#FFFFFF"}`
           },
           "image": "",
           "position": "",
@@ -58,7 +58,7 @@ const Particle = () => {
           "detectsOn": "window",
           "events": {
             "onClick": {
-              "enable": true,
+              "enable": false,
               "mode": "push"
             },
             "onDiv": {
@@ -303,7 +303,7 @@ const Particle = () => {
             "drift": 0,
             "enable": true,
             "gravity": {
-              "acceleration": 5,
+              "acceleration": 2,
               "enable": true,
               "inverse": false,
               "maxSpeed": 2
@@ -546,7 +546,7 @@ const Particle = () => {
           }
         },
         "pauseOnBlur": true,
-        "pauseOnOutsideViewport": true,
+        "pauseOnOutsideViewport": false,
         "responsive": [],
         "smooth": true,
         "style": {},

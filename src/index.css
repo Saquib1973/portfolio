@@ -80,7 +80,19 @@
     @apply text-white/60;
   }
   .adminHeading {
-    @apply text-white text-2xl mb-2;
+    @apply text-white text-2xl mb-2 lowercase;
+  }
+  .adminSubHeading {
+    @apply text-green text-lg mb-2 uppercase underline underline-offset-4;
+  }
+  .input {
+    @apply text-white bg-black rounded-md outline-none p-1 px-2 text-lg;
+  }
+  .button {
+    @apply bg-black text-green rounded-md p-2;
+  }
+  .customButton {
+    @apply transition-all duration-500 mb-2 hover:text-black hover:bg-white p-2 py-1 rounded-md;
   }
 }
 

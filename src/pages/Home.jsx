@@ -134,14 +134,14 @@ const Home = () => {
             <div className="px-4">
                 <Project />
                 <TechStack />
-                <div className='max-lg:hidden'>
+                {/* <div className='max-lg:hidden'>
                     <Terminal
                         history={history}
                         promptLabel={currentDir}
                         ref={setTerminalRef}
                         commands={{ ...commands, default: handleUnknownCommand }}
                     />
-                </div>
+                </div> */}
                 <Socials />
             </div>
         </div>
