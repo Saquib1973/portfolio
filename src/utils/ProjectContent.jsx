@@ -3,6 +3,7 @@ import nyaylok from "../imgs/nyaylok.jpeg"
 import blogig from "../imgs/blogigg.png"
 import academia from "../imgs/academia.png"
 import multimeter from "../imgs/multimeter.png"
+import issuetracker from "../imgs/Issuetracker.png"
 /*
 Project content format :
     {
@@ -27,6 +28,17 @@ export const Projects = [
         ,
         type: ['frontend', 'design'],
         detail: 'Streamlined case management system developed for Smart India Hackathon 2023. Prioritized cases, facilitated resolutions, and enhanced judiciary efficiency.', tags: ['react', 'redux', 'tailwind'], link: 'https://nyaylok.onrender.com/', git: 'https://github.com/Saquib1973/Nyaylok-Frontend', img: nyaylok, date: '2021-25'
+    },
+    {
+        id: 'issueTracker', name: 'IssueTracker', description: [
+            "Issue Tracker is a dynamic web application designed to revolutionize the blogging experience.",
+            "With its user-friendly interface and intuitive editor powered by EditorJs, Blogig offers a seamless platform for writers to create and share engaging content effortlessly.",
+            "The website boasts a meticulously crafted UI/UX design, leveraging the power of Framer Motion and Tailwind CSS to deliver a visually stunning and immersive user experience.",
+            "Through Blogig, users can not only write and publish blogs but also explore a range of customization options to enhance their content.",
+            "From dynamic animations to responsive layouts, Blogig prioritizes both aesthetics and functionality, ensuring that bloggers can express themselves creatively while reaching a wider audience."
+        ],
+        type: ['frontend', 'backend', 'design', 'fullstack'],
+        detail: 'A user-friendly web app for writing and sharing blogs. Featuring an intuitive editor, beautiful UI/UX design, and integration of Framer Motion and Tailwind CSS.', tags: ['editor-js', 'framer-motion', 'mern', 'tailwind', 'aws-sdk', 'firebase'], link: 'https://tracker-sandy.vercel.app/', git: 'https://github.com/Saquib1973/tracker', img: issuetracker, date: '2023-24'
     },
     {
         id: 'blogig', name: 'Blogig', description: [

@@ -10,7 +10,7 @@ const Education = () => {
     }, []);
 
     return (
-        <div>
+        <>
             <Navigation heading={educationContent.heading} description={educationContent.description} />
             <div className='px-4'>
 
@@ -18,7 +18,7 @@ const Education = () => {
                 <StudyTimeLine />
                 <Socials />
             </div>
-        </div>
+        </>
     )
 }
 

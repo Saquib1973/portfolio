@@ -6,8 +6,8 @@ export const navItems = [
     // { name: 'blog', link: 'https://blogig.vercel.app/user/saquib', icon: <i className="text-2xl fi fi-sr-blog-text"></i> },
 ]
 export const homeContent = {
-    heading: "hey I'm saquib 🙋‍♂️",
-    description: "Hey there! I'm Saquib Ali, a passionate 3rd-year B.Tech ECE student at IIIT Ranchi. My world revolves around the intersection of DSA, MERN stack, and problem-solving. I thrive on challenges, constantly seeking new opportunities to innovate and grow in the ever-evolving tech landscape. Let's build the future together!"
+    heading: "hey I'm Saquib 🙋‍♂️",
+    description: "Hey there! I'm Saquib Ali, a passionate 4th-year B.Tech ECE(hons) student at IIIT Ranchi. My world revolves around the intersection of DSA, Frontend development, and problem-solving. I thrive on challenges, constantly seeking new opportunities to innovate and grow in the ever-evolving tech landscape. Let's build the future together!"
 }
 export const workContent = {
     heading: "my work ⚒️",

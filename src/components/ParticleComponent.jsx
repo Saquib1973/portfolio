@@ -26,7 +26,7 @@ const Particle = () => {
         "autoPlay": true,
         "background": {
           "color": {
-            "value": `${theme === "dark" ? "#040303" : "#FFFFFF"}`
+            "value": `${theme === "dark" ? "#0f0f0f" : "#FFFFFF"}`
           },
           "image": "",
           "position": "",

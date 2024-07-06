@@ -30,21 +30,21 @@ export const wait = (time) => {
     return new Promise((resolve) => {
         setTimeout(() => {
             resolve();
-        }, 1000);
+        }, time);
     });
 };
 
-const Project = lazy(() => wait(2000).then(() => import("./pages/Project")));
-const Resume = lazy(() => wait(2000).then(() => import("./pages/Resume")));
+const Project = lazy(() => wait(0).then(() => import("./pages/Project")));
+const Resume = lazy(() => wait(0).then(() => import("./pages/Resume")));
 const GuestBook = lazy(() =>
-    wait(2000).then(() => import("./pages/GuestBook"))
+    wait(0).then(() => import("./pages/GuestBook"))
 );
 const Education = lazy(() =>
-    wait(2000).then(() => import("./pages/Education"))
+    wait(0).then(() => import("./pages/Education"))
 );
-const Error = lazy(() => wait(2000).then(() => import("./pages/Error")));
-const Home = lazy(() => wait(2000).then(() => import("./pages/Home")));
-const Work = lazy(() => wait(2000).then(() => import("./pages/Work")));
+const Error = lazy(() => wait(0).then(() => import("./pages/Error")));
+const Home = lazy(() => wait(0).then(() => import("./pages/Home")));
+const Work = lazy(() => wait(0).then(() => import("./pages/Work")));
 
 export const ThemeContext = createContext({});
 export const AdminContext = createContext({});

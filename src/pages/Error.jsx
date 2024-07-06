@@ -8,7 +8,7 @@ const Error = () => {
     }, []);
 
     return (
-        <div>
+        <>
             <Navigation heading={'⚠️ page not available ⚠️'} />
             <div className='w-full flex items-center justify-center px-4'>
 
@@ -16,7 +16,7 @@ const Error = () => {
                 <img src={error} alt="error image" className='m-8 h-[500px] w-[500px] rounded-xl blur-[2px]' />
             </div>
             <Socials />
-        </div>
+        </>
     )
 }
 

@@ -6,6 +6,7 @@ export const AnimatedHamburgerButton = ({ navMobile, setNavMobile }) => {
 
     return (
         <MotionConfig
+            className="select-none [&>*]:select-none"
             transition={{
                 duration: 0.5,
                 ease: "easeInOut",
@@ -15,7 +16,7 @@ export const AnimatedHamburgerButton = ({ navMobile, setNavMobile }) => {
                 initial={false}
                 animate={active ? "open" : "closed"}
                 onClick={() => setActive((pv) => !pv)}
-                className={`relative h-14 w-14 rounded-full transition-colors hover:bg-white/20  ${active ? "bg-red-500/80 scale-50 hover:bg-red-500" : "scale-75"}`}
+                className={`relative h-14 w-14 rounded-full select-none transition-colors  ${active ? "bg-red-500/80 scale-50" : "scale-75"}`}
                 style={{ padding: 0, overflow: "hidden" }}
             >
                 <motion.span

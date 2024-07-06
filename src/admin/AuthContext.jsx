@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 export const AuthContext = createContext();
 
 const AuthProvider = ({ children }) => {
-    const [authToken, setAuthToken] = useState(localStorage.getItem('authToken'));
+    const [authToken, setAuthToken] = useState(localStorage.getItem('authToken') ? localStorage.getItem('authToken') : "");
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -48,7 +48,6 @@ const AuthProvider = ({ children }) => {
             });
             const data = await response.json();
             if (response.ok) {
-                console.log('Token is valid:', data);
             } else {
                 console.error('Invalid token:', data.error);
                 logout(); // Invalidate token on client side if server responds with an error

@@ -14,7 +14,7 @@ const AdminDashboard = () => {
         <NavContext.Provider value={{ navMobile, setNavMobile }}>
 
             <div className='flex border border-white/20 overflow-y-auto h-[87vh] p-4 rounded-md bg-white/10 backdrop-blur-md mt-14 relative'>
-                <button className={`md:hidden absolute ${navMobile ? "left-[100px] top-0" : "left-0 top-0 "} duration-[350ms] transition-all w-6 h-6 z-50`} onClick={() => setNavMobile(pre => !pre)}>
+                <button className={`md:hidden absolute ${navMobile ? "left-[100px] top-0" : "left-0 top-0 "} select-none duration-[350ms] transition-all w-6 h-6 z-50`} onClick={() => setNavMobile(pre => !pre)}>
                     <AnimatedHamburgerButton value={{ navMobile, setNavMobile }} />
 
                     {/* {!navMobile ?
