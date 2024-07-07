@@ -23,7 +23,7 @@ const Project = () => {
                     <Link to={project.git} className='w-1/2 text-2xl bg-blackFade text-white rounded-md hover:text-gray-50 shadow-inner shadow-white/40 hover:bg-green p-2 px-5 gap-2 flex items-center justify-center'><i className="fi text-xl fi-brands-github hover:text-green"></i>Github</Link>
                     {
                         project.link &&
-                        <Link to={project.link} className='w-1/2 text-2xl hover:bg-green rounded-md hover:text-gray-50 shadow-inner shadow-white/40 text-black bg-white p-2 px-5 gap-2 flex items-center justify-center'><i className="fi text-xl fi-rr-link-alt hover:text-green"></i>Web App</Link>
+                        <Link to={project.link} className='w-1/2 text-2xl hover:bg-green rounded-md hover:text-gray-50 shadow-inner shadow-white/40 text-black bg-white p-2 px-5 gap-2 flex items-center justify-center'><i className="fi text-xl fi-rr-link-alt hover:text-green"></i>Live Link</Link>
                     }
                 </div>
                 <p className='adminSubHeading mb-0 pt-4'>

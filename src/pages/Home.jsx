@@ -9,6 +9,8 @@ import { homeContent } from "../utils/NavigationContent"
 import { ThemeContext } from '../App';
 import { tech } from '../utils/Resource';
 import { SquigglyUnderlineWrapper } from '../components/SquigglyWrapper';
+import Map from '../components/Map';
+import TextReveal from '../components/TextReveal';
 
 const Home = () => {
     const { history, pushToHistory, setTerminalRef, resetTerminal } = useTerminal();
@@ -134,8 +136,10 @@ const Home = () => {
             <Navigation heading={homeContent.heading} description={homeContent.description} />
             <div className="px-4 text-6xl">
 
+                {/* <TextReveal /> */}
                 <Project />
                 <TechStack />
+                <Map />
                 {/* <div className='max-lg:hidden'>
                     <Terminal
                         history={history}

@@ -64,7 +64,7 @@ const App = () => {
     return (
         <AuthProvider>
             <ThemeContext.Provider value={{ theme, setTheme }}>
-                <AnimatePresence>
+                <AnimatePresence mode="wait" >
                     <Suspense fallback={<Loading />}>
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}

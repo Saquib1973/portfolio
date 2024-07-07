@@ -24,6 +24,7 @@ export const SquigglyUnderlineWrapper = ({ ml = "", isSelected = true, children 
                             transition={{
                                 delay: 1,
                                 duration: 1.5,
+                                ease: [0.37, 0.67, 0.83, 0.27]
                             }}
                         />
                     </svg>

@@ -10,6 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@arcgis/core": "^4.30.5",
+    "@arcgis/map-components": "^4.30.3",
     "@cyntler/react-doc-viewer": "^1.14.1",
     "@editorjs/code": "^2.8.0",
     "@editorjs/editorjs": "^2.27.2",
