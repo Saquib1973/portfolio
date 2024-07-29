@@ -139,6 +139,7 @@ const Home = () => {
                 {/* <TextReveal /> */}
                 <Project />
                 <TechStack />
+
                 <Map />
                 {/* <div className='max-lg:hidden'>
                     <Terminal

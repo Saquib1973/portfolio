@@ -54,23 +54,23 @@ const Map = () => {
     }, [zoom]);
 
     return (
-        <>
+        <div className='max-md:max-w-screen-sm overflow-hidden p-4'>
             <Heading name={'where'} />
             <section className="flex flex-col items-center w-full">
 
                 <div className="relative w-[150%] h-96  rounded-3xl border border-blackFade bg-blackFade overflow-hidden shadow-lg">
                     <div ref={mapDiv} className="w-full h-full" />
                     <h2 className="text-lg flex font-extralight mb-2 px-2 p-1 absolute z-50 top-3 right-4 bg-white text-black rounded-xl">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#836FFF" className="h-6 w-6">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="#836FFF" className="h-6 w-6">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
                         </svg>
                         Ranchi
 
                     </h2>
                 </div>
             </section>
-        </>
+        </div>
 
     );
 };
